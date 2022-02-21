@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
 
     private int currHealth;
     private bool justDamaged;
-    private float cooldown = 1f; 
+    private float cooldown = 1f;
+    private float chaseTriggerDist;
 
     void Start()
     {
