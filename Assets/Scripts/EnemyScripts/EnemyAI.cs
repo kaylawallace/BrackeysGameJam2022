@@ -8,28 +8,46 @@ public class EnemyAI : MonoBehaviour
     public Transform target;
     public float speed = 5f;
     public float nextWaypointDist = 0.5f;
+    public GameObject projectile;
 
     private Path path;
     private int currWaypoint;
     private bool reachedPathEnd = false;
     private Seeker seeker;
     private Rigidbody2D rb;
+    [SerializeField] private float seekPlayerDist, attackPlayerDist, retreatDist;
+    [SerializeField] private float maxShotTime;
+    private float currShotTime;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
+
+        currShotTime = maxShotTime;
+
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector2.Distance(rb.position, target.position) < 3f)
+        if (Vector2.Distance(rb.position, target.position) < seekPlayerDist && Vector2.Distance(rb.position, target.position) > attackPlayerDist)
         {
-            FollowPlayer();   
-        }       
+            FollowPlayer(false);
+        }
+        else if (Vector2.Distance(rb.position, target.position) < attackPlayerDist && Vector2.Distance(rb.position, target.position) > retreatDist)
+        {
+            AttackPlayer();
+        }
+        else if (Vector2.Distance(rb.position, target.position) < retreatDist)
+        {
+            FollowPlayer(true);
+        }
+
+        print(Vector2.Distance(rb.position, target.position));
     }
+
 
     void OnPathComplete(Path p)
     {
@@ -40,7 +58,8 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void FollowPlayer()
+    // reverse used for retreat 
+    private void FollowPlayer(bool reverse)
     {
         if (path == null)
         {
@@ -58,7 +77,15 @@ public class EnemyAI : MonoBehaviour
         }
 
         Vector2 dir = ((Vector2) path.vectorPath[currWaypoint] - rb.position).normalized;
+
+        if (reverse)
+        {
+            dir = -dir; 
+
+        }
+
         Vector2 force = dir * speed * Time.deltaTime;
+
         rb.MovePosition(rb.position + force * speed * Time.deltaTime);
 
         float dist = Vector2.Distance(rb.position, path.vectorPath[currWaypoint]);
@@ -74,5 +101,31 @@ public class EnemyAI : MonoBehaviour
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }   
+    }
+
+    private void AttackPlayer()
+    {
+        if (gameObject.CompareTag("MeleeEnemy"))
+        {
+            // implement melee attacks here
+        }
+        else if (gameObject.CompareTag("RangeEnemy"))
+        {
+            // implement ranged attacks here 
+            RangedAttack();
+        }
+    }
+
+    private void RangedAttack()
+    {
+        if (currShotTime <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            currShotTime = maxShotTime; 
+        }
+        else
+        {
+            currShotTime -= Time.deltaTime;
+        }
     }
 }

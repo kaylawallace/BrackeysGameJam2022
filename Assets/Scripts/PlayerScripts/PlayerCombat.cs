@@ -13,7 +13,7 @@ public class PlayerCombat : MonoBehaviour
 
     private bool attackLight = false, attackHeavy = false;
     private int lightDamage = 25, heavyDamage = 50;
-    private int currDamage; 
+    private int currDamage;
 
     private void Start()
     {
