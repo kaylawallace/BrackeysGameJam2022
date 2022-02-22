@@ -44,8 +44,6 @@ public class EnemyAI : MonoBehaviour
         {
             FollowPlayer(true);
         }
-
-        print(Vector2.Distance(rb.position, target.position));
     }
 
 
