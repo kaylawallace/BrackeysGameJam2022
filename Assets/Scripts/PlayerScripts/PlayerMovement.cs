@@ -35,11 +35,11 @@ public class PlayerMovement : MonoBehaviour
         }      
     }
 
-    //private void Update()
-    //{
-    //    Animate();
-    //    Debug.Log(movInput.magnitude);
-    //}
+    private void Update()
+    {
+       Animate();
+       Debug.Log(movInput.magnitude);
+    }
 
     private void Move()
     {
@@ -82,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    //void Animate()
-    //{
-    //    anim.SetFloat("AnimMoveX", movInput.x);
-    //    anim.SetFloat("AnimMoveY", movInput.y);
-    //    anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
+    void Animate()
+    {
+       anim.SetFloat("AnimMoveX", movInput.x);
+       anim.SetFloat("AnimMoveY", movInput.y);
+       anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
         
-    //}
+    }
 }

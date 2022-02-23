@@ -288,7 +288,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.547127
+  orthographic size: 6.192951
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378699903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 10.66, z: -10}
+  m_LocalPosition: {x: 0.2, y: 8.13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -972,8 +972,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481086950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1629771, y: -4.0947995, z: 0}
-  m_LocalScale: {x: 1.0186069, y: 1.0186069, z: 1.0186069}
+  m_LocalPosition: {x: 0, y: -0.89, z: 0}
+  m_LocalScale: {x: 0.19030632, y: 0.19030632, z: 0.19030632}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1210876552}
@@ -1157,9 +1157,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1488509914990906153, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1488509916692400258, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488509916692400261, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1488509916692400262, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: m_RootOrder
@@ -1264,7 +1272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6503697, g: 0.6509434, b: 0.5557583, a: 1}
   m_FlipX: 0
