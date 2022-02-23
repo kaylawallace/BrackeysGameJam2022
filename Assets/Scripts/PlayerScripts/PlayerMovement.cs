@@ -16,9 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private float dashTime;
     private float cooldownTime = 1f;
 
+    private Animator anim;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
         dashTime = startDashTime;
     }
 
@@ -31,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
             Dash();
         }      
     }
+
+    //private void Update()
+    //{
+    //    Animate();
+    //    Debug.Log(movInput.magnitude);
+    //}
 
     private void Move()
     {
@@ -72,4 +81,12 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime);
         canDash = true;
     }
+
+    //void Animate()
+    //{
+    //    anim.SetFloat("AnimMoveX", movInput.x);
+    //    anim.SetFloat("AnimMoveY", movInput.y);
+    //    anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
+        
+    //}
 }
