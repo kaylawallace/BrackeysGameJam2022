@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Animator anim;
+    private Animator anim;
     public Transform attackPoint;
     public Collider2D swordCollider;
     public float attackRange = .5f;
@@ -14,11 +14,13 @@ public class PlayerCombat : MonoBehaviour
     private bool attackLight = false, attackHeavy = false;
     private int lightDamage = 25, heavyDamage = 50;
     private int currDamage;
+    private float attackCooldown = 0f;
 
     private void Start()
     {
         swordCollider.enabled = false;
         currDamage = lightDamage;
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -37,24 +39,30 @@ public class PlayerCombat : MonoBehaviour
         {
             swordCollider.enabled = false; 
         }
+
+        if (attackCooldown > 0)
+        {
+            attackCooldown -= Time.deltaTime;
+        }
     }
 
     private void LightAttack()
     {
-        // Play attack anim here 
-        // anim.SetTrigger("LightAttack");
-
-        // this will be done in anim eventually
-        swordCollider.enabled = true;
+        if(attackCooldown <= 0)
+        {
+            anim.SetTrigger("LightAttack");
+            attackCooldown = 1f;
+        }
+        
     }
 
     private void HeavyAttack()
     {
-        // Play attack anim here 
-        // anim.SetTrigger("LightAttack");
-
-        // this will be done in anim eventually
-        swordCollider.enabled = true;
+        if (attackCooldown <= 0)
+        {
+            anim.SetTrigger("HeavyAttack");
+            attackCooldown = 1f;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

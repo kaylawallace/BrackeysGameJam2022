@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
        Animate();
-       Debug.Log(movInput.magnitude);
     }
 
     private void Move()
@@ -50,11 +49,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (dashTime <= 0)
         {
+            //Dash doesn't set to false if player stops holding move half way through
+            anim.SetBool("Dash", false);
             dashTime = startDashTime;
             StartCoroutine(Cooldown(cooldownTime));
         }
         else
         {
+            anim.SetBool("Dash", true);
             rb.MovePosition(rb.position + movInput * dashSpeed * Time.fixedDeltaTime);
             dashTime -= Time.deltaTime;
         }
@@ -73,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnDash(InputAction.CallbackContext context)
     {
         dashed = context.action.triggered;
+        
     }
 
     IEnumerator Cooldown(float cooldownTime)
@@ -87,6 +90,5 @@ public class PlayerMovement : MonoBehaviour
        anim.SetFloat("AnimMoveX", movInput.x);
        anim.SetFloat("AnimMoveY", movInput.y);
        anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
-        
-    }
+        }
 }

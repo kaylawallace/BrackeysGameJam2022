@@ -422,7 +422,16 @@ AnimationClip:
     path: Character_Front
     classID: 1
     script: {fileID: 0}
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: a6008af90dc258f46b006e66c3dfb6af, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 6f9d3ebff38971040be3395418a2be0d, type: 3}
+    attribute: m_Sprite
+    path: Character_Front/Front_Root_Jnt/Front_Torso_Jnt/Front_Chest_Jnt/Front_Neck_Jnt/Front_Head_Jnt/Facial_Expressions_-6
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -536,6 +545,13 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 3634498259
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 2651792610
       attribute: 4
       script: {fileID: 0}
@@ -556,7 +572,9 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: a6008af90dc258f46b006e66c3dfb6af, type: 3}
+    - {fileID: 21300000, guid: 6f9d3ebff38971040be3395418a2be0d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
