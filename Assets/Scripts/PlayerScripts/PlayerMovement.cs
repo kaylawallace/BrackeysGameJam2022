@@ -16,12 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private float dashTime;
     private float cooldownTime = 1f;
 
-    private Animator anim;
+    //private Animator anim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        //anim = GetComponentInChildren<Animator>();
         dashTime = startDashTime;
     }
 
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-       Animate();
+       //Animate();
     }
 
     private void Move()
@@ -50,13 +50,13 @@ public class PlayerMovement : MonoBehaviour
         if (dashTime <= 0)
         {
             //Dash doesn't set to false if player stops holding move half way through
-            anim.SetBool("Dash", false);
+            //anim.SetBool("Dash", false);
             dashTime = startDashTime;
             StartCoroutine(Cooldown(cooldownTime));
         }
         else
         {
-            anim.SetBool("Dash", true);
+            //anim.SetBool("Dash", true);
             rb.MovePosition(rb.position + movInput * dashSpeed * Time.fixedDeltaTime);
             dashTime -= Time.deltaTime;
         }
@@ -87,8 +87,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Animate()
     {
-       anim.SetFloat("AnimMoveX", movInput.x);
-       anim.SetFloat("AnimMoveY", movInput.y);
-       anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
-        }
+       //anim.SetFloat("AnimMoveX", movInput.x);
+       //anim.SetFloat("AnimMoveY", movInput.y);
+       //anim.SetFloat("AnimMoveMagnitude", movInput.magnitude);
+    }
 }
