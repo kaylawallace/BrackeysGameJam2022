@@ -10,6 +10,7 @@ TagManager:
   - RangeEnemy
   - MeleeEnemy
   - Projectile
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
