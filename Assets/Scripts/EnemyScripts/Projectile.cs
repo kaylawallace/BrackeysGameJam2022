@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
 
     private Transform player;
     private Vector2 target;
-    private Rigidbody2D rb;
     private Vector3 dir;
     [SerializeField] private int rangedDamage, meleeDamage;
 
@@ -17,7 +16,6 @@ public class Projectile : MonoBehaviour
         player = GameObject.Find("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
         dir = ((Vector3)target - transform.position).normalized;
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()

@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     public float speed = 5f;
     public float nextWaypointDist = 0.5f;
     public GameObject projectile;
+    public bool canShoot = true;
 
     private Path path;
     private int currWaypoint;
@@ -110,7 +111,10 @@ public class EnemyAI : MonoBehaviour
         else if (gameObject.CompareTag("RangeEnemy"))
         {
             // implement ranged attacks here 
-            RangedAttack();
+            if (canShoot)
+            {
+                RangedAttack();
+            }            
         }
     }
 

@@ -8,12 +8,14 @@ public class RemoveHelmetAbility : MonoBehaviour
     [HideInInspector] public bool removed;
     public GameObject dungeon, room;
     public Animator transitionAnimator;
-    bool cooling; 
+    bool cooling;
+    GameObject[] rangedEnemies;
+    GameObject[] projectiles; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
     }
 
     // Update is called once per frame
@@ -22,16 +24,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         if (removed)
         {
             RemoveHelmet();
-            
-
-            if (!cooling)
-            {
-               
-            }
         }
-
-        //print(cooling);
-            
     }
 
     public void RemoveHelmet()
@@ -41,25 +34,47 @@ public class RemoveHelmetAbility : MonoBehaviour
         // set dungeon to inactive and room to active 
 
         print("taking helmet off");
-        transitionAnimator.SetTrigger("helmet_off");
-        dungeon.SetActive(false);
-        room.SetActive(true);
-
+        DisableEnemies(false);
+        DestroyProjectiles();
+        transitionAnimator.SetBool("helmetOff", true);
+        StartCoroutine(SwitchRooms(true));
+        StartCoroutine(SetFalse("helmetOff"));
         StartCoroutine(Cooldown(5f));
     }
 
     public void PutHelmetBackOn()
-    {
-
+    {       
         print("putting helmet back on");
-        transitionAnimator.SetTrigger("helmet_on");
-        room.SetActive(false);
-        dungeon.SetActive(true);
+        transitionAnimator.SetBool("helmetOn", true);
+        StartCoroutine(SwitchRooms(false));
+        StartCoroutine(SetFalse("helmetOn"));
+        DisableEnemies(true);
     }
 
     public void OnRemoved(InputAction.CallbackContext context)
     {
         removed = context.action.triggered;
+    }
+
+    IEnumerator SetFalse(string boolName)
+    {
+        yield return new WaitForSeconds(0.5f);
+        transitionAnimator.SetBool(boolName, false);
+    }
+
+    IEnumerator SwitchRooms(bool isDungeon)
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (isDungeon)
+        {
+            dungeon.SetActive(false);
+            room.SetActive(true);
+        }
+        else if (!isDungeon)
+        {
+            dungeon.SetActive(true);
+            room.SetActive(false);
+        }
     }
 
     IEnumerator Cooldown(float cooldownTime)
@@ -70,6 +85,23 @@ public class RemoveHelmetAbility : MonoBehaviour
         cooling = false;
         print("done cooling");
         PutHelmetBackOn();
+    }
 
+    public void DisableEnemies(bool canShoot)
+    {
+        for (int i = 0; i < rangedEnemies.Length; i++)
+        {
+            rangedEnemies[i].GetComponent<EnemyAI>().canShoot = canShoot;
+        }
+    }
+
+    public void DestroyProjectiles()
+    {
+        projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+
+        for (int i = 0; i < projectiles.Length; i++)
+        {
+            Destroy(projectiles[i], 0.5f);
+        }
     }
 }
