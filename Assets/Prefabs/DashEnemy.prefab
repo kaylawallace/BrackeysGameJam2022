@@ -299,8 +299,8 @@ MonoBehaviour:
   - {fileID: 1051218972}
   - {fileID: 1441189420}
   m_Bounds:
-    m_Center: {x: -0.000982523, y: 0.000079870224, z: 0}
-    m_Extent: {x: 3.6990218, y: 3.5049202, z: 0}
+    m_Center: {x: -0.0009806156, y: 0.000079870224, z: 0}
+    m_Extent: {x: 3.69902, y: 3.5049202, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -503,6 +503,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  hitEffects:
+  - {fileID: 6222109575921599490, guid: 8e3f76dc9d7ef2749b7ba5040c4ffa9b, type: 3}
+  - {fileID: 6855157553538282964, guid: cc86740cd32e9e149bf371b6218f85ed, type: 3}
+  - {fileID: 1632973251758859456, guid: 31071392a4a96ad468ead2814f8ad92a, type: 3}
+  bloodSpray: {fileID: 4043083958201741630, guid: 89825eb71545aec4bbb5d141b632e066, type: 3}
 --- !u!114 &766686143440387465
 MonoBehaviour:
   m_ObjectHideFlags: 0

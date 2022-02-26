@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour
     private int currHealth;
     private bool justDamaged;
     private float cooldown = 1f;
+    [SerializeField]
+    private GameObject[] hitEffects;
+    [SerializeField]
+    private GameObject bloodSpray;
     private Animator anim;
 
     void Start()
@@ -37,6 +41,10 @@ public class Enemy : MonoBehaviour
             justDamaged = true;
             currHealth -= damage;
             anim.SetTrigger("Damage");
+            GameObject newHit = (Instantiate(hitEffects[Random.Range(0, hitEffects.Length)], transform.position, Quaternion.identity));
+            GameObject newSpray = (Instantiate(bloodSpray, transform.position, Quaternion.identity));
+            Destroy(newHit, 2f);
+            Destroy(newSpray, 2f);
 
             // Play hurt anim
             print("damaged");
