@@ -51,7 +51,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         StartCoroutine(SwitchRooms(false));
         StartCoroutine(SetFalse("helmetOn"));
         DisableEnemies(true);
-        StartCoroutine(Cooldown(abilityCooldownTime));
+        StartCoroutine(Cooldown(20f));
     }
 
     public void OnRemoved(InputAction.CallbackContext context)
