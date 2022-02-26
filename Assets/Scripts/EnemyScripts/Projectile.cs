@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     private Transform player;
     private Vector2 target;
     private Vector3 dir;
-    [SerializeField] private int rangedDamage, meleeDamage;
+    [SerializeField] private int rangedDamage;
 
     private void Start()
     {
@@ -40,6 +40,8 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Destroy(gameObject, 10f);
     }
 
 }

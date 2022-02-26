@@ -62,11 +62,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Flip()
-    {
-
-    }
-
     public void OnMove(InputAction.CallbackContext context)
     {
         movInput = context.ReadValue<Vector2>();

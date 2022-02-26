@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public float speed = 5f;
     public float nextWaypointDist = 0.5f;
     public GameObject projectile;
-    public bool canShoot = true;
+    public bool canShoot = true, canDash = true;
 
     private Path path;
     private int currWaypoint;
@@ -17,8 +17,9 @@ public class EnemyAI : MonoBehaviour
     private Seeker seeker;
     private Rigidbody2D rb;
     [SerializeField] private float seekPlayerDist, attackPlayerDist, retreatDist;
-    [SerializeField] private float maxShotTime;
-    private float currShotTime;
+    [SerializeField] private float maxShotTime, maxDashTime;
+    private float currShotTime, currDashTime;
+    [SerializeField] private float dashSpeed; 
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
 
         currShotTime = maxShotTime;
+        currDashTime = maxDashTime;
 
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
@@ -107,6 +109,10 @@ public class EnemyAI : MonoBehaviour
         if (gameObject.CompareTag("MeleeEnemy"))
         {
             // implement melee attacks here
+            if (canDash)
+            {
+                DashAttack();
+            }
         }
         else if (gameObject.CompareTag("RangeEnemy"))
         {
@@ -129,5 +135,31 @@ public class EnemyAI : MonoBehaviour
         {
             currShotTime -= Time.deltaTime;
         }
+    }
+
+    private void DashAttack()
+    {
+        Vector3 dir = ((Vector3)target.position - transform.position).normalized;
+        Vector2 dir2d = new Vector2(dir.x * 15, dir.y * 15);
+
+        if (currDashTime <= 0)
+        {
+            StartCoroutine(Cooldown());
+            currDashTime = maxDashTime;           
+        }
+        else
+        {
+            currDashTime -= Time.deltaTime;
+            //rb.velocity = (new Vector2(dir.x * dashSpeed * Time.deltaTime, dir.y * dashSpeed * Time.deltaTime));
+            rb.MovePosition(rb.position + dir2d * dashSpeed * Time.deltaTime);
+        }
+    }
+
+    IEnumerator Cooldown()
+    {
+        canDash = false;
+        print("cooling");
+        yield return new WaitForSeconds(3f);
+        canDash = true; 
     }
 }

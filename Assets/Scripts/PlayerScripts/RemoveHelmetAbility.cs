@@ -9,13 +9,14 @@ public class RemoveHelmetAbility : MonoBehaviour
     public GameObject dungeon, room;
     public Animator transitionAnimator;
     bool cooling;
-    GameObject[] rangedEnemies;
+    GameObject[] rangedEnemies, dashEnemies;
     GameObject[] projectiles; 
 
     // Start is called before the first frame update
     void Start()
     {
         rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
+        dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
     }
 
     // Update is called once per frame
@@ -87,11 +88,16 @@ public class RemoveHelmetAbility : MonoBehaviour
         PutHelmetBackOn();
     }
 
-    public void DisableEnemies(bool canShoot)
+    public void DisableEnemies(bool canAttack)
     {
         for (int i = 0; i < rangedEnemies.Length; i++)
         {
-            rangedEnemies[i].GetComponent<EnemyAI>().canShoot = canShoot;
+            rangedEnemies[i].GetComponent<EnemyAI>().canShoot = canAttack;
+        }
+
+        for (int i = 0; i < dashEnemies.Length; i++)
+        {
+            dashEnemies[i].GetComponent<EnemyAI>().canDash = canAttack;
         }
     }
 

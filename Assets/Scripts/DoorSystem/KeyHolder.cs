@@ -47,7 +47,7 @@ public class KeyHolder : MonoBehaviour
             {
                 door.OpenDoor();
                 RemoveKey(door.GetKeyType());
-                //loader.LoadNextLevel();
+                loader.LoadNextLevel();
             }
         }
     }
