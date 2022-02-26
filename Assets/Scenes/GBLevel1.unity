@@ -8038,6 +8038,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4768277293854347734, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+      propertyPath: m_CellSize.x
+      value: 2.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768277293854347734, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+      propertyPath: m_CellSize.y
+      value: 2.025
+      objectReference: {fileID: 0}
     - target: {fileID: 4768277293854347735, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
       propertyPath: m_Name
       value: Tile_Grid
