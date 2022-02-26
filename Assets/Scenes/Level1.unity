@@ -3555,8 +3555,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1488509916692400263, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488509916692400263, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488509916692400263, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1488509916692400263, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
