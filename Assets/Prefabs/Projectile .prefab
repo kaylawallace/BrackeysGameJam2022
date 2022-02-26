@@ -115,9 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18468df9f477149488540d4f00619325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   rangedDamage: 20
-  meleeDamage: 30
 --- !u!50 &436083016056264599
 Rigidbody2D:
   serializedVersion: 4
