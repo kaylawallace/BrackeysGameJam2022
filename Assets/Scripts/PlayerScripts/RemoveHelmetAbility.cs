@@ -10,7 +10,8 @@ public class RemoveHelmetAbility : MonoBehaviour
     public Animator transitionAnimator;
     bool cooling;
     GameObject[] rangedEnemies, dashEnemies;
-    GameObject[] projectiles; 
+    GameObject[] projectiles;
+    float abilityCooldownTime = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class RemoveHelmetAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (removed)
+        if (removed && !cooling)
         {
             RemoveHelmet();
         }
@@ -34,22 +35,23 @@ public class RemoveHelmetAbility : MonoBehaviour
         // play slide anim 
         // set dungeon to inactive and room to active 
 
-        print("taking helmet off");
+        cooling = true;
         DisableEnemies(false);
         DestroyProjectiles();
         transitionAnimator.SetBool("helmetOff", true);
         StartCoroutine(SwitchRooms(true));
         StartCoroutine(SetFalse("helmetOff"));
-        StartCoroutine(Cooldown(5f));
+        StartCoroutine(SwitchBackToDungeon(5f));
     }
 
     public void PutHelmetBackOn()
-    {       
-        print("putting helmet back on");
+    {
+        cooling = true;
         transitionAnimator.SetBool("helmetOn", true);
         StartCoroutine(SwitchRooms(false));
         StartCoroutine(SetFalse("helmetOn"));
         DisableEnemies(true);
+        StartCoroutine(Cooldown(20f));
     }
 
     public void OnRemoved(InputAction.CallbackContext context)
@@ -78,14 +80,17 @@ public class RemoveHelmetAbility : MonoBehaviour
         }
     }
 
+    IEnumerator SwitchBackToDungeon(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        PutHelmetBackOn();
+    }
+
     IEnumerator Cooldown(float cooldownTime)
     {
-        print("cooling down");
         cooling = true;
         yield return new WaitForSeconds(cooldownTime);
-        cooling = false;
-        print("done cooling");
-        PutHelmetBackOn();
+        cooling = false; 
     }
 
     public void DisableEnemies(bool canAttack)
