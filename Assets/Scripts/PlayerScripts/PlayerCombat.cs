@@ -33,7 +33,9 @@ public class PlayerCombat : MonoBehaviour
         else if (attackHeavy)
         {
             currDamage = heavyDamage;
+           
             HeavyAttack();
+            
         }
         else
         {
@@ -61,6 +63,7 @@ public class PlayerCombat : MonoBehaviour
         if (attackCooldown <= 0)
         {
             anim.SetTrigger("HeavyAttack");
+            StartCoroutine(SetCanMove());
             attackCooldown = 1f;
         }
     }
@@ -81,5 +84,12 @@ public class PlayerCombat : MonoBehaviour
     public void OnHeavyAttack(InputAction.CallbackContext context)
     {
         attackHeavy = context.action.triggered;
+    }
+
+    IEnumerator SetCanMove()
+    {
+        GetComponent<PlayerMovement>().canMove = false;
+        yield return new WaitForSeconds(0.75f);
+        GetComponent<PlayerMovement>().canMove = true;
     }
 }

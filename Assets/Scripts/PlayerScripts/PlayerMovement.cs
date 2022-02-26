@@ -8,11 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float dashSpeed = 10f;
     public float startDashTime = 1f;
+    public bool canMove = true;
 
     private Rigidbody2D rb;
     private Vector2 movInput = Vector2.zero;
     private bool facingRight = true;
-    private bool dashed = false, canDash = true, canMove = true;
+    private bool dashed = false, canDash = true;
     private float dashTime;
     private float cooldownTime = 1f;
     Vector2 dir;
