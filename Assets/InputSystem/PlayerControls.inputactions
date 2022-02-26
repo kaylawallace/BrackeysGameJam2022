@@ -34,12 +34,12 @@
                 },
                 {
                     "name": "Dash",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "c25774ee-0ea6-4667-8809-a6f26e66657c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Tap",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "RemoveHelmet",

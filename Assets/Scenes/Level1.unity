@@ -322,8 +322,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252312708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.85, y: -0.83, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 17.9, y: -8.13, z: 0}
+  m_LocalScale: {x: 0.69064, y: 0.69064, z: 0.69064}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1419512462}
@@ -1008,8 +1008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586316884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.17, y: -0.79, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 14.58, y: -8.39, z: 0}
+  m_LocalScale: {x: 0.58457, y: 0.58457, z: 0.58457}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 872555269}
@@ -1222,8 +1222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872555268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.309999, y: -5.75, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 586316885}
@@ -2207,9 +2207,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419512461}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.31, y: -5.75, z: 0}
-  m_LocalScale: {x: 0.67405355, y: 0.67405355, z: 0.67405355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 252312709}
@@ -2507,6 +2507,10 @@ PrefabInstance:
     - target: {fileID: 7523871573824653400, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523871573824653400, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7523871573824653400, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
       propertyPath: m_TagString
@@ -3510,6 +3514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1488509916692400259, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: startDashTime
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1488509916692400262, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3700,6 +3708,10 @@ PrefabInstance:
     - target: {fileID: 7523871573824653400, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523871573824653400, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7523871573824653405, guid: d73e600cd094e5d409837e2ebc71f4d9, type: 3}
       propertyPath: target
