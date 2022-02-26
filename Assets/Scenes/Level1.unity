@@ -1401,7 +1401,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 940573744}
-  - component: {fileID: 940573746}
   - component: {fileID: 940573745}
   m_Layer: 0
   m_Name: DoorPurple
@@ -1439,22 +1438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 0
---- !u!58 &940573746
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940573743}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0097203255}
-  serializedVersion: 2
-  m_Radius: 1.7150455
 --- !u!1 &941045117
 GameObject:
   m_ObjectHideFlags: 3
@@ -1552,7 +1535,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942461971}
-  - component: {fileID: 942461973}
   - component: {fileID: 942461972}
   m_Layer: 0
   m_Name: DoorBlue
@@ -1590,22 +1572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 1
---- !u!58 &942461973
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942461970}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.009720206}
-  serializedVersion: 2
-  m_Radius: 1.6178423
 --- !u!1 &1174572676
 GameObject:
   m_ObjectHideFlags: 0
