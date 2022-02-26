@@ -19,12 +19,14 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float seekPlayerDist, attackPlayerDist, retreatDist;
     [SerializeField] private float maxShotTime, maxDashTime;
     private float currShotTime, currDashTime;
-    [SerializeField] private float dashSpeed; 
+    [SerializeField] private float dashSpeed;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
+        anim = GetComponentInChildren<Animator>();
 
         currShotTime = maxShotTime;
         currDashTime = maxDashTime;
@@ -150,9 +152,11 @@ public class EnemyAI : MonoBehaviour
 
     private void RangedAttack()
     {
+        
         if (currShotTime <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            anim.SetTrigger("Shoot");
             currShotTime = maxShotTime; 
         }
         else
@@ -165,7 +169,7 @@ public class EnemyAI : MonoBehaviour
     {
         Vector3 dir = (target.position - transform.position).normalized;
         Vector2 dir2d = new Vector2(dir.x * 15, dir.y * 15);
-
+        anim.SetTrigger("Dash");
         if (currDashTime <= 0)
         {
             StartCoroutine(Cooldown());

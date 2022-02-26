@@ -9,10 +9,12 @@ public class Enemy : MonoBehaviour
     private int currHealth;
     private bool justDamaged;
     private float cooldown = 1f;
+    private Animator anim;
 
     void Start()
     {
         currHealth = maxHealth;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -34,6 +36,7 @@ public class Enemy : MonoBehaviour
         {
             justDamaged = true;
             currHealth -= damage;
+            anim.SetTrigger("Damage");
 
             // Play hurt anim
             print("damaged");
