@@ -22,13 +22,14 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
-    public void ReloadCurrentScene()
+    public void ReloadCurrentScene(float startWait)
     {
-        StartCoroutine(ReloadCurrentSceneCoroutine());
+        StartCoroutine(ReloadCurrentSceneCoroutine(startWait));
     }
 
-    IEnumerator ReloadCurrentSceneCoroutine()
+    IEnumerator ReloadCurrentSceneCoroutine(float startWait)
     {
+        yield return new WaitForSeconds(startWait);
         anim.SetTrigger("start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
