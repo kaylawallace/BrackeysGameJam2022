@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (dashed && canDash)
         {
+            dir = movInput;
             Dash();
         }      
 
@@ -53,12 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
-        dir = movInput;
-        print(dashTime);
-
         if (dashTime <= 0 || (rb.velocity.x >= 0.1 && rb.velocity.y <= 0.1))
         {
-            //Dash doesn't set to false if player stops holding move half way through
             anim.SetBool("Dash", false);
             dashTime = startDashTime;
             StartCoroutine(Cooldown(cooldownTime));
