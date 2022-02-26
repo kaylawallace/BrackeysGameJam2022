@@ -13,7 +13,7 @@ public class PlayerCombat : MonoBehaviour
 
     private bool attackLight = false, attackHeavy = false;
     private int lightDamage = 25, heavyDamage = 50;
-    private int currDamage;
+    public int currDamage;
     private float attackCooldown = 0f;
 
     private void Start()
@@ -65,14 +65,6 @@ public class PlayerCombat : MonoBehaviour
             anim.SetTrigger("HeavyAttack");
             StartCoroutine(SetCanMove());
             attackCooldown = 1f;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            collision.GetComponent<Enemy>().TakeDamage(currDamage);
         }
     }
 

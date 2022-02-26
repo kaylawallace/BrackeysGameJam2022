@@ -35,6 +35,18 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (gameObject.CompareTag("RangeEnemy"))
+        {
+            RangeEnemyMove();
+        }
+        else if (gameObject.CompareTag("MeleeEnemy"))
+        {
+            DashEnemyMove();
+        }
+    }
+
+    void RangeEnemyMove()
+    {
         if (Vector2.Distance(rb.position, target.position) < seekPlayerDist && Vector2.Distance(rb.position, target.position) > attackPlayerDist)
         {
             FollowPlayer(false);
@@ -46,6 +58,18 @@ public class EnemyAI : MonoBehaviour
         else if (Vector2.Distance(rb.position, target.position) < retreatDist)
         {
             FollowPlayer(true);
+        }
+    }
+
+    void DashEnemyMove()
+    {
+        if (Vector2.Distance(rb.position, target.position) < seekPlayerDist && Vector2.Distance(rb.position, target.position) > attackPlayerDist)
+        {
+            FollowPlayer(false);
+        }
+        else if (Vector2.Distance(rb.position, target.position) < attackPlayerDist)
+        {
+            AttackPlayer();
         }
     }
 
@@ -139,7 +163,7 @@ public class EnemyAI : MonoBehaviour
 
     private void DashAttack()
     {
-        Vector3 dir = ((Vector3)target.position - transform.position).normalized;
+        Vector3 dir = (target.position - transform.position).normalized;
         Vector2 dir2d = new Vector2(dir.x * 15, dir.y * 15);
 
         if (currDashTime <= 0)
@@ -149,16 +173,20 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            currDashTime -= Time.deltaTime;
+            
             //rb.velocity = (new Vector2(dir.x * dashSpeed * Time.deltaTime, dir.y * dashSpeed * Time.deltaTime));
-            rb.MovePosition(rb.position + dir2d * dashSpeed * Time.deltaTime);
+            //rb.MovePosition(rb.position + dir2d * dashSpeed * Time.fixedDeltaTime);
+            transform.position += dir * dashSpeed * Time.fixedDeltaTime;
+            //transform.position = Vector2.MoveTowards(transform.position, dir2d, dashSpeed * Time.fixedDeltaTime);
+            //rb.AddForce(dir2d * dashSpeed * Time.deltaTime);
+
+            currDashTime -= Time.deltaTime;
         }
     }
 
     IEnumerator Cooldown()
     {
         canDash = false;
-        print("cooling");
         yield return new WaitForSeconds(3f);
         canDash = true; 
     }

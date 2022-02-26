@@ -8,11 +8,9 @@ public class DashEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player plr = collision.GetComponent<Player>();
-
-        if (plr)
+        if (collision.CompareTag("Player"))
         {
-            plr.TakeDamage(dashDamage);
+            collision.GetComponent<Player>().TakeDamage(dashDamage);
         }
     }
 }

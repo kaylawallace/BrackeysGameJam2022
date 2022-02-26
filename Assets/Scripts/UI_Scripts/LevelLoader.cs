@@ -21,4 +21,17 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void ReloadCurrentScene()
+    {
+        StartCoroutine(ReloadCurrentSceneCoroutine());
+    }
+
+    IEnumerator ReloadCurrentSceneCoroutine()
+    {
+        anim.SetTrigger("start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
 }

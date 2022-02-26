@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     private Animator anim;
     public HealthBar healthBar;
+    public LevelLoader levelLoader;
 
     private int health;
     private bool justDamaged;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         anim = GetComponentInChildren<Animator>();
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
     }
 
     private void Update()
@@ -45,5 +47,14 @@ public class Player : MonoBehaviour
                 //death
             }
         }       
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hole"))
+        {
+            anim.SetTrigger("Fallen");
+            levelLoader.ReloadCurrentScene();
+        }
     }
 }

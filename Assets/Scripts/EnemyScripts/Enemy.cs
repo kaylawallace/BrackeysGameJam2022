@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
             currHealth -= damage;
 
             // Play hurt anim
+            print("damaged");
 
             if (currHealth <= 0)
             {

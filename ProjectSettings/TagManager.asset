@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - PlayerAttack
   - Hole
+  - Door
   layers:
   - Default
   - TransparentFX
