@@ -18,7 +18,6 @@ public class KeyHolder : MonoBehaviour
 
     public void AddKey(Key.KeyType key)
     {
-        print("added key " + key);
         keyUI.gameObject.SetActive(true);
         keys.Add(key);
     }
