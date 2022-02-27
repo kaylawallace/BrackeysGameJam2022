@@ -36,6 +36,9 @@ public class RemoveHelmetAbility : MonoBehaviour
         // play slide anim 
         // set dungeon to inactive and room to active 
 
+        rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
+        dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+
         cooling = true;
         DisableEnemies(false);
         DestroyProjectiles();
@@ -47,6 +50,9 @@ public class RemoveHelmetAbility : MonoBehaviour
 
     public void PutHelmetBackOn()
     {
+        rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
+        dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+
         cooling = true;
         transitionAnimator.SetBool("helmetOn", true);
         StartCoroutine(SwitchRooms(false));
