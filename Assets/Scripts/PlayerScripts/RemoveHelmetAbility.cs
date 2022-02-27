@@ -12,6 +12,8 @@ public class RemoveHelmetAbility : MonoBehaviour
     bool cooling;
     GameObject[] rangedEnemies, dashEnemies;
     GameObject[] projectiles;
+    public SpriteRenderer[] dungeonRen, roomRen; 
+
     float abilityCooldownTime = 20f;
 
     // Start is called before the first frame update
@@ -78,6 +80,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         if (isDungeon)
         {
             dungeon.SetActive(false);
+            DisableRenderers(true);
             dungeonTiles.SetActive(false);
             room.SetActive(true);
             roomTiles.SetActive(true);
@@ -85,6 +88,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         else if (!isDungeon)
         {
             dungeon.SetActive(true);
+            DisableRenderers(false);
             dungeonTiles.SetActive(true);
             room.SetActive(false);
             roomTiles.SetActive(false);
@@ -124,6 +128,34 @@ public class RemoveHelmetAbility : MonoBehaviour
         for (int i = 0; i < projectiles.Length; i++)
         {
             Destroy(projectiles[i], 0.5f);
+        }
+    }
+
+    public void DisableRenderers(bool isDungeon)
+    {
+        if (isDungeon)
+        {
+            for (int i = 0; i < dungeonRen.Length; i++)
+            {
+                dungeonRen[i].enabled = false;
+            }
+
+            for (int i = 0; i < roomRen.Length; i++)
+            {
+                roomRen[i].enabled = true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < dungeonRen.Length; i++)
+            {
+                dungeonRen[i].enabled = true;
+            }
+
+            for (int i = 0; i < roomRen.Length; i++)
+            {
+                roomRen[i].enabled = false;
+            }
         }
     }
 }

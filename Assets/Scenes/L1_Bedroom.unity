@@ -761,6 +761,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beba22171665ba349990af131b0b4c80, type: 3}
+--- !u!114 &603668529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4554875152183061160, guid: beba22171665ba349990af131b0b4c80, type: 3}
+  m_PrefabInstance: {fileID: 603668528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99ff3aa35af64646b5e48fce0133007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658995468
 GameObject:
   m_ObjectHideFlags: 0
@@ -9150,6 +9161,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 367561288}
+    - target: {fileID: 1488509916692400266, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 603668529}
     - target: {fileID: 1488509916692400267, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: keyUI
       value: 
