@@ -65,3 +65,18 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Treasure
+    clip: {fileID: 8300000, guid: c0cabce778ad54792bba3a0ca6765417, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Remove_Helmet
+    clip: {fileID: 8300000, guid: 914a4a2a124d040df96bf13308aadc2e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Don_Helmet
+    clip: {fileID: 8300000, guid: ca056d4afe5e74498a0798f16e0e866d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
