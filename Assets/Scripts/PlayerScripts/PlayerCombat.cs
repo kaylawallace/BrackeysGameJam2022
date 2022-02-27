@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerCombat : MonoBehaviour
 {
     private Animator anim;
+    private AudioManager am;
     public Transform attackPoint;
     public Collider2D swordCollider;
     public float attackRange = .5f;
@@ -21,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
         swordCollider.enabled = false;
         currDamage = lightDamage;
         anim = GetComponentInChildren<Animator>();
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()

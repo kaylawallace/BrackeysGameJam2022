@@ -14,11 +14,13 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject bloodSpray;
     private Animator anim;
+    private AudioManager am;
 
     void Start()
     {
         currHealth = maxHealth;
         anim = GetComponentInChildren<Animator>();
+        am = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
@@ -41,6 +43,7 @@ public class Enemy : MonoBehaviour
             justDamaged = true;
             currHealth -= damage;
             anim.SetTrigger("Damage");
+            am.Play("Player_Attack");
             GameObject newHit = (Instantiate(hitEffects[Random.Range(0, hitEffects.Length)], transform.position, Quaternion.identity));
             GameObject newSpray = (Instantiate(bloodSpray, transform.position, Quaternion.identity));
             Destroy(newHit, 2f);

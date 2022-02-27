@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (!s.source.isPlaying)
         {
-        s.source.Play();
+        s.source.PlayDelayed(0.2f);
         }
     }
 

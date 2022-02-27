@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public int maxHealth;
     private Animator anim;
+    private AudioManager am;
     public HealthBar healthBar;
     public LevelLoader levelLoader;
 
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         anim = GetComponentInChildren<Animator>();
+        am = FindObjectOfType<AudioManager>();
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         anim.SetBool("Dead", false);
     }
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour
             health -= damage;
             healthBar.SetHealth(health);
             anim.SetTrigger("Damage");
+            am.Play("Player_Hit");
 
             if (health <= 0)
             {

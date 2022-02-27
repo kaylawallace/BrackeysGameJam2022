@@ -19,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
     Vector2 dir;
 
     private Animator anim;
+    private AudioManager am;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        am = FindObjectOfType<AudioManager>();
         dashTime = startDashTime;
     }
 
@@ -51,6 +53,14 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.MovePosition(rb.position + movInput * speed * Time.fixedDeltaTime);
+        if (movInput.magnitude > 0.1)
+        {
+            am.PlayLoop("Run");
+        }
+        else
+        {
+            am.StopPlaying("Run");
+        }
     }
 
     private void Dash()

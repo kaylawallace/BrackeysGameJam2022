@@ -52,13 +52,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Enemy_Hit
     clip: {fileID: 8300000, guid: 6cdf2b6afcdf03c4fb959f056819ba48, type: 3}
-    volume: 1
+    volume: 0.736
     pitch: 1
     source: {fileID: 0}
   - name: Player_Attack
     clip: {fileID: 8300000, guid: f9cfc0e6ef7909a4fa3f8663ac5f3034, type: 3}
-    volume: 0.76
-    pitch: 1
+    volume: 0.376
+    pitch: 1.8
     source: {fileID: 0}
   - name: Player_Hit
     clip: {fileID: 8300000, guid: 2ac0a349c7713154ba78a2f05431da1c, type: 3}
