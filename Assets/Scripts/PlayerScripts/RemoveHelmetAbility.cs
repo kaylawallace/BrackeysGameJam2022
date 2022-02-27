@@ -22,6 +22,11 @@ public class RemoveHelmetAbility : MonoBehaviour
     {
         rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
         dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+
+        for (int i = 0; i < roomRen.Length; i++)
+        {
+            roomRen[i].enabled = false; 
+        }
     }
 
     // Update is called once per frame
