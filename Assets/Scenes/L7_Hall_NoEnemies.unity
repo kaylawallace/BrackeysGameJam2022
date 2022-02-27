@@ -1262,7 +1262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112183993}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 15.404789, y: -9.445049, z: 0.13444953}
+  m_LocalPosition: {x: 15.07, y: -9.445049, z: 0.13444953}
   m_LocalScale: {x: 0.20169541, y: 0.20169541, z: 0.20169541}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1735,9 +1735,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1446882669}
   - component: {fileID: 1446882670}
-  m_Layer: 0
+  - component: {fileID: 1446882672}
+  - component: {fileID: 1446882671}
+  m_Layer: 3
   m_Name: Medieval_Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1750,7 +1752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446882668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.22579, y: -1.2400494, z: 0.13444953}
+  m_LocalPosition: {x: 6.99, y: -1.28, z: 0.13444953}
   m_LocalScale: {x: 0.20169541, y: 0.20169541, z: 0.20169541}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1809,6 +1811,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1446882671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446882668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a0b1b63e8c4594ab0296f297c6bb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 0
+--- !u!61 &1446882672
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446882668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.051949}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.24, y: 16.343899}
+  m_EdgeRadius: 0
 --- !u!1001 &1478891052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9128,7 +9169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577053451}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.66079, y: -5.3270493, z: 0.13444953}
+  m_LocalPosition: {x: 25.21, y: -5.33, z: 0.13444953}
   m_LocalScale: {x: 0.20169543, y: 0.20169543, z: 0.20169541}
   m_ConstrainProportionsScale: 0
   m_Children: []

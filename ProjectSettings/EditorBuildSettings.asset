@@ -9,9 +9,30 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 05321ab854294f14884fe8761edee22b
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/L1_Bedroom.unity
+    guid: 9c7f55b5c66e9944e8baf3be7a3eb3d2
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: f4efcc882eed2d94ca24476f62d28212
+    path: Assets/Scenes/L2_Hallway.unity
+    guid: 715b7eb4a1695914991d91a80b8d0dd4
+  - enabled: 1
+    path: Assets/Scenes/L3_DiningRoom.unity
+    guid: 5c2b4614cf01159499f4187e21a640f6
+  - enabled: 1
+    path: Assets/Scenes/L4_Livingroom.unity
+    guid: 33083768605a20042a939825403241c6
+  - enabled: 1
+    path: Assets/Scenes/L5_Hall2.unity
+    guid: 86b4e5d86aa22a84f88df42db8e998fc
+  - enabled: 1
+    path: Assets/Scenes/L6_Library.unity
+    guid: f709b8b0cdf382649a40e92332ae9b8f
+  - enabled: 1
+    path: Assets/Scenes/L6.5_Hall2_2.unity
+    guid: b28047e559d1362458e51a141fe7949a
+  - enabled: 1
+    path: Assets/Scenes/L7_Hall_NoEnemies.unity
+    guid: 31d705721bb0a0840bdcefcd93608c23
+  - enabled: 1
+    path: Assets/Scenes/L8_Priory.unity
+    guid: d98ad9a8d80c8b746ad86dbca4ce9d37
   m_configObjects: {}

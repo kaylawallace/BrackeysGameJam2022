@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private int health;
     private bool justDamaged;
     private float cooldown = 1f;
+    GameObject[] rangedEnemies, dashEnemies;
 
     void Start()
     {  
@@ -65,6 +66,20 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("Fallen");
             levelLoader.ReloadCurrentScene(0f);
+        }
+
+        if (collision.CompareTag("Door"))
+        {
+            rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
+            dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+
+            Door door = collision.GetComponent<Door>();
+
+            if (door && rangedEnemies.Length == 0 && dashEnemies.Length == 0)
+            {
+                door.OpenDoor();
+                levelLoader.LoadNextLevel();
+            }
         }
     }
 }
