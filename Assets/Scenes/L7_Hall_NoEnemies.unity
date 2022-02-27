@@ -1580,6 +1580,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 755671205}
     - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: roomTiles
+      value: 
+      objectReference: {fileID: 1478891054}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: dungeonTiles
+      value: 
+      objectReference: {fileID: 1478891053}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: transitionAnimator
       value: 
       objectReference: {fileID: 381567529}
@@ -8807,6 +8815,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+--- !u!1 &1478891053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293628370886, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 1478891052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1478891054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293286103827, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 1478891052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545252718
 GameObject:
   m_ObjectHideFlags: 0
