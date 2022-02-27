@@ -9102,6 +9102,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1433289815}
     - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 2104169931}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: dungeonTiles
       value: 
       objectReference: {fileID: 1433289814}
@@ -9413,6 +9417,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &2104169931 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 481086953, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+  m_PrefabInstance: {fileID: 1959329405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2114582074
 GameObject:
   m_ObjectHideFlags: 0

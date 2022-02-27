@@ -12,7 +12,8 @@ public class RemoveHelmetAbility : MonoBehaviour
     bool cooling;
     GameObject[] rangedEnemies, dashEnemies;
     GameObject[] projectiles;
-    public SpriteRenderer[] dungeonRen, roomRen; 
+    public SpriteRenderer[] dungeonRen, roomRen;
+    public Animator playerAnim; 
 
     float abilityCooldownTime = 20f;
 
@@ -41,6 +42,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
         dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
 
+        playerAnim.SetTrigger("RemoveHelmet");
         cooling = true;
         DisableEnemies(false);
         DestroyProjectiles();
@@ -55,6 +57,7 @@ public class RemoveHelmetAbility : MonoBehaviour
         rangedEnemies = GameObject.FindGameObjectsWithTag("RangeEnemy");
         dashEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
 
+        playerAnim.SetTrigger("DonHelmet");
         cooling = true;
         transitionAnimator.SetBool("helmetOn", true);
         StartCoroutine(SwitchRooms(false));
