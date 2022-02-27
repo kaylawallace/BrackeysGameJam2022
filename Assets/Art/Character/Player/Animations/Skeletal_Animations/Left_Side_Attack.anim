@@ -557,6 +557,86 @@ AnimationClip:
     path: Character_Back
     classID: 1
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_L_Sleeve_Jnt/Side_L_Arm_Jnt/Side_L_Glove_Jnt/Helmet_Front
+      (1)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_L_Sleeve_Jnt/Side_L_Arm_Jnt/Side_L_Glove_Jnt/Move_Right_Sword/WoodenSpoon
+      (1)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_R_Sleeve_Jnt/Side_R_Arm_Jnt/Side_R_glove_Jnt/Move_Left_Sword/WoodenSpoon
+      (2)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_R_Sleeve_Jnt/Side_R_Arm_Jnt/Side_R_glove_Jnt/Helmet_Front
+      (2)
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
@@ -733,6 +813,34 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 392430153
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 4158445225
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 591792001
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1036562716
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3357733526
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -2318,6 +2426,86 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: Character_Back
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_L_Sleeve_Jnt/Side_L_Arm_Jnt/Side_L_Glove_Jnt/Helmet_Front
+      (1)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_L_Sleeve_Jnt/Side_L_Arm_Jnt/Side_L_Glove_Jnt/Move_Right_Sword/WoodenSpoon
+      (1)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_R_Sleeve_Jnt/Side_R_Arm_Jnt/Side_R_glove_Jnt/Move_Left_Sword/WoodenSpoon
+      (2)
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Character_Side/Side_Root_Jnt/Side_Torso_Jnt/Side_Chest_Jnt/Side_R_Sleeve_Jnt/Side_R_Arm_Jnt/Side_R_glove_Jnt/Helmet_Front
+      (2)
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
