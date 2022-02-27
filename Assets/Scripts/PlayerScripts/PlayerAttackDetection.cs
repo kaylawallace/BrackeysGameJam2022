@@ -15,7 +15,6 @@ public class PlayerAttackDetection : MonoBehaviour
     {
         if (collision.CompareTag("RangeEnemy") || collision.CompareTag("MeleeEnemy"))
         {
-            print("hit enemy");
             collision.GetComponent<Enemy>().TakeDamage(plr.currDamage);
         }
     }

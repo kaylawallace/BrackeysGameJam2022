@@ -46,7 +46,6 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         anim.SetTrigger("start");
         yield return new WaitForSeconds(.5f);
-        print("quitting");
         Application.Quit();
     }
 }

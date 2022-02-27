@@ -46,9 +46,6 @@ public class Enemy : MonoBehaviour
             Destroy(newHit, 2f);
             Destroy(newSpray, 2f);
 
-            // Play hurt anim
-            print("damaged");
-
             if (currHealth <= 0)
             {
                 Die();
