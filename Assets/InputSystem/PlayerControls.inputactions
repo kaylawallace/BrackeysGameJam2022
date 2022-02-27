@@ -38,7 +38,7 @@
                     "id": "c25774ee-0ea6-4667-8809-a6f26e66657c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -155,7 +155,7 @@
                     "name": "",
                     "id": "ae3aa908-9039-4cc7-a505-1e6be33f5f1a",
                     "path": "<Keyboard>/leftShift",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Dash",
