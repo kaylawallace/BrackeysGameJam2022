@@ -55,8 +55,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
-        if (dashTime <= 0 || (rb.velocity.x >= 0.1 && rb.velocity.y <= 0.1))
+        if (dashTime <= 0 || (rb.velocity.x >= 0.15 && rb.velocity.y <= 0.15))
         {
+            dashed = false; 
             anim.SetBool("Dash", false);
             dashTime = startDashTime;
             StartCoroutine(Cooldown(cooldownTime));
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            dashed = true;
             canMove = false; 
             anim.SetBool("Dash", true);
             rb.MovePosition(rb.position + dir * dashSpeed * Time.fixedDeltaTime);
@@ -79,8 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        dashed = context.action.triggered;
-        
+        dashed = context.action.triggered;    
     }
 
     IEnumerator Cooldown(float cooldownTime)
