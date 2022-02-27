@@ -35,4 +35,18 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+
+    public void EndGame()
+    {
+        StartCoroutine(EndGameCoroutine(2f));
+    }
+
+    IEnumerator EndGameCoroutine(float startWait)
+    {
+        yield return new WaitForSeconds(startWait);
+        anim.SetTrigger("start");
+        yield return new WaitForSeconds(.5f);
+        print("quitting");
+        Application.Quit();
+    }
 }
