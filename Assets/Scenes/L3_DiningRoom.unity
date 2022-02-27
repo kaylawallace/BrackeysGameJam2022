@@ -909,7 +909,7 @@ Transform:
   - {fileID: 1640547271}
   - {fileID: 2116362683}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &450167375
 GameObject:
@@ -11248,7 +11248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5547237161477779254, guid: ad87f5ef5cda4234abce3d5ca72dd5ee, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5547237161477779254, guid: ad87f5ef5cda4234abce3d5ca72dd5ee, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11335,6 +11335,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9303c5fa629917458ed17e5e9d7b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &960753368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 507553829813714273, guid: ad87f5ef5cda4234abce3d5ca72dd5ee, type: 3}
+  m_PrefabInstance: {fileID: 960753366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974369570
 GameObject:
   m_ObjectHideFlags: 0
@@ -11370,7 +11381,7 @@ Transform:
   - {fileID: 1703302193}
   - {fileID: 1230813777}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1030951020
 GameObject:
@@ -11615,6 +11626,10 @@ PrefabInstance:
       propertyPath: levelLoader
       value: 
       objectReference: {fileID: 74203709}
+    - target: {fileID: 1488509916692400267, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: keyUI
+      value: 
+      objectReference: {fileID: 960753368}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
 --- !u!4 &1050585132 stripped
@@ -13059,7 +13074,7 @@ Transform:
   - {fileID: 554136069}
   - {fileID: 579988960}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116362681
 GameObject:

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyHolder : MonoBehaviour
 {
     private List<Key.KeyType> keys;
-    LevelLoader loader; 
+    LevelLoader loader;
+
+    public Image keyUI;
 
     private void Awake()
     {
@@ -16,11 +19,13 @@ public class KeyHolder : MonoBehaviour
     public void AddKey(Key.KeyType key)
     {
         print("added key " + key);
+        keyUI.gameObject.SetActive(true);
         keys.Add(key);
     }
 
     public void RemoveKey(Key.KeyType key)
     {
+        keyUI.gameObject.SetActive(false);
         keys.Remove(key);
     }
 
