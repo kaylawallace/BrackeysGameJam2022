@@ -7,6 +7,7 @@ public class RemoveHelmetAbility : MonoBehaviour
 {
     [HideInInspector] public bool removed;
     public GameObject dungeon, room;
+    public GameObject dungeonTiles, roomTiles;
     public Animator transitionAnimator;
     bool cooling;
     GameObject[] rangedEnemies, dashEnemies;
@@ -71,12 +72,16 @@ public class RemoveHelmetAbility : MonoBehaviour
         if (isDungeon)
         {
             dungeon.SetActive(false);
+            dungeonTiles.SetActive(false);
             room.SetActive(true);
+            roomTiles.SetActive(true);
         }
         else if (!isDungeon)
         {
             dungeon.SetActive(true);
+            dungeonTiles.SetActive(true);
             room.SetActive(false);
+            roomTiles.SetActive(false);
         }
     }
 

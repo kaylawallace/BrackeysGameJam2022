@@ -139,6 +139,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 810924949}
     - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: roomTiles
+      value: 
+      objectReference: {fileID: 363225009}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: dungeonTiles
+      value: 
+      objectReference: {fileID: 73678712}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: transitionAnimator
       value: 
       objectReference: {fileID: 1332619578}
@@ -208,6 +216,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1488509916692400262, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
   m_PrefabInstance: {fileID: 3711646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &73678712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293628370886, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 1577895439}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &338554119
 GameObject:
@@ -455,6 +468,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3, y: 7.9}
   m_EdgeRadius: 0
+--- !u!1 &363225009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293286103827, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 1577895439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &376891980
 GameObject:
   m_ObjectHideFlags: 0
