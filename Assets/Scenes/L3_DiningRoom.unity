@@ -909,7 +909,7 @@ Transform:
   - {fileID: 1640547271}
   - {fileID: 2116362683}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &450167375
 GameObject:
@@ -11051,6 +11051,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+--- !u!1 &893760857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293286103827, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 893760856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &893760858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768277293628370886, guid: 7c3833c6dd09c354d9b9f859962c6acb, type: 3}
+  m_PrefabInstance: {fileID: 893760856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &945557072
 GameObject:
   m_ObjectHideFlags: 0
@@ -11486,6 +11496,14 @@ PrefabInstance:
       propertyPath: dungeon
       value: 
       objectReference: {fileID: 1979853461}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: roomTiles
+      value: 
+      objectReference: {fileID: 893760857}
+    - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
+      propertyPath: dungeonTiles
+      value: 
+      objectReference: {fileID: 893760858}
     - target: {fileID: 1488509914816864594, guid: 95036da27fd620a4884cf87f411f5090, type: 3}
       propertyPath: transitionAnimator
       value: 
